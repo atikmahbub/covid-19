@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+
+.status-main{
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+}
+@media only screen and (max-width: 768px) {
+    .status-main{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .paper-1 , .paper-2 , .paper-3 , .paper-4{
+        width: 90% !important;
+        height: 50vh !important;
+        margin: 10px;
+    }
+}
+
+
+.paper-1 , .paper-2 , .paper-3 , .paper-4{
+    height: 20vh;
+    flex-basis: 23%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.paper-1{
+    border-top: 5px solid #17a2b8;
+}
+.paper-2{
+    border-top: 5px solid rgb(173, 75, 75);
+}
+.paper-3{
+    border-top: 5px solid #28a745;
+}
+.paper-4{
+    border-top: 5px solid #6c757d;
+}
+.paper-number{
+    margin-top: 3%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Abril Fatface', cursive !important;
+}
+
+body{
+    font-family: "Fira Sans", "Lato", Arial, sans-serif;
+}
+
+.paper-text1 , .paper-text2 , .paper-text3 ,.paper-text4{
+    font-size: 1.1rem;
+    color: #fafafa;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.paper-text1{
+    background: #17a2b8;
+}
+.paper-text2{
+    background: rgb(173, 75, 75);
+}
+.paper-text3{
+    background: #28a745;
+}
+.paper-text4{
+    background: #6c757d;
+}
+
+.stat-table{
+    display: flex;
+    justify-content: space-evenly;
+}
+.stat-table1{
+    width: 98%;
+    border-radius: 5px;
+}

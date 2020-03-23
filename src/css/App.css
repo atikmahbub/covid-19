@@ -1,0 +1,44 @@
+.App{
+  display: flex;
+  justify-content: space-evenly;
+}
+@media only screen and (max-width: 768px) {
+  .App{
+    flex-direction: column;
+  }
+  .status-div , .info-div{
+    width: 100% !important; 
+  }
+  .time{
+    margin-top: 20%;
+  }
+}
+
+.App-main{
+  margin-top: 7%;
+}
+
+.status-div{
+  width: 70%;
+
+}
+.info-div{
+  width: 27%;
+}
+
+.time{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  height: 30px;
+  font-weight: 900;
+
+}
+
+.copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+
+}

@@ -1,0 +1,84 @@
+.info1{
+    height: 43vh;
+    overflow: auto;
+    border-radius: 5px;
+    border-top: 5px solid #6c757d;
+    margin-top: 4%;
+
+}
+hr {
+    background-color: #fff;
+  }
+  
+hr.hr-1 {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+.title-info{
+    text-align: center;
+    font-weight: 900;
+}
+.hotline-div{
+    display: flex;
+    padding: 10px 0 0 10px;
+}
+
+.info-main{
+    display: flex;
+    flex-direction: column;
+}
+
+.info2{
+    height: 42vh;
+    border-radius: 5px;
+    border-top: 5px solid #6c757d;
+    overflow: auto;
+}
+
+.info2 div{
+    padding: 10px 10px 0 10px;
+}
+
+@media only screen and (min-width: 1024px) and (max-height: 1366px)
+    and (-webkit-min-device-pixel-ratio: 1.5) and (hover: none) {
+    .info2{
+        height: 31vh;
+    }
+    .info1{
+        height: 31vh;
+    }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait) {
+    .info2{
+        height: 26vh;
+    }
+    .info1{
+        height: 26vh;
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+    .info2{
+        height: 40vh;
+    }
+    .info1{
+        height: 38vh;
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .info2{
+        height: 32vh;
+    }
+    .info1{
+        height: 32vh;
+    }
+ }
