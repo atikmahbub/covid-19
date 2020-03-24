@@ -130,7 +130,7 @@ function Chart() {
               <Pie
                 data={pieData}
                 options={{ responsive: true }}
-                height="200"
+                height="180"
               />
         </Paper>
 
