@@ -38,8 +38,8 @@ function App() {
     <div className="time">  Update On : {date} </div>
 
     <div className="App">
-        <div><Status/></div>
-        <div ><Chart/></div>
+        <div className="staus-app"><Status/></div>
+        <div><Chart/></div>
     </div>
 
     <div className="copyright">

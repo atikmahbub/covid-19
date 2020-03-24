@@ -9,6 +9,14 @@
       position: relative;
       top: 40px;
   }
+  .staus-app{
+    height: 100% !important;
+  }
+  .copyright{
+    position: relative;
+    top: 370px;
+
+  }
 }
 
 
@@ -21,9 +29,10 @@
 }
 
 .copyright{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-
+  width: 100%;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  margin-top: 20px;
+  color: gray;
 }

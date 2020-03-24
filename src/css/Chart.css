@@ -24,6 +24,8 @@
 
     .chart1 , .chart2 , .chart3{
         width: 98%;
+        position: relative;
+        top: 200px;
     }
 }
 
