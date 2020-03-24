@@ -14,7 +14,7 @@
   }
   .copyright{
     position: relative;
-    top: 370px;
+    top: 390px;
 
   }
 }
@@ -32,7 +32,10 @@
   width: 100%;
   display: block;
   text-align: center;
-  height: 10vh;
   margin-top: 20px;
   color: gray;
+}
+
+.copy-div a{
+  color: rgb(112, 137, 190);
 }

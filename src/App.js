@@ -6,7 +6,7 @@ import Chart from './Chart'
 
 function Copyright(){
   return(
-    <div>
+    <div className="copy-div">
       {"Copyright © "}
       <a color="#1D2939" target="_BLANK" href="https://www.facebook.com/atik.m11">
         Atik Mahbub
