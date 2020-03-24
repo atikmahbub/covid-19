@@ -144,7 +144,7 @@ function Status() {
                 <div className="paper-number">{state.recover}</div>
             </Paper>
             <Paper elevation={3} className="paper-4">
-                <div className="paper-text4">Total Country </div>
+                <div className="paper-text4">Total Country</div>
                 <div className="paper-number">{state.totalCountry}</div>
             </Paper>
         </div>
