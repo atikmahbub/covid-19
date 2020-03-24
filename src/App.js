@@ -35,7 +35,7 @@ function App() {
       <Nav/>
       </div>
     
-    <div className="time">  Update On : {date} </div>
+    <div className="time">Last Updated on : {date} </div>
 
     <div className="App">
         <div className="staus-app"><Status/></div>
