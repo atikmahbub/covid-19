@@ -88,7 +88,7 @@
         display: flex;
         margin: 10px !important;
         flex-direction: row !important;
-        justify-content: space-around !important;
+        justify-content: space-evenly !important;
         align-items: center !important;
     }
     .paper-number{
