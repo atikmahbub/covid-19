@@ -1,38 +1,23 @@
-.App{
+.App-div{
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  margin-top: 8%;
 }
-@media only screen and (max-width: 768px) {
-  .App{
-    flex-direction: column;
-  }
-  .status-div , .info-div{
-    width: 100% !important; 
-  }
+
+@media only screen and (max-width: 600px) {
   .time{
-    margin-top: 20%;
+      position: relative;
+      top: 40px;
   }
 }
 
-.App-main{
-  margin-top: 7%;
-}
-
-.status-div{
-  width: 70%;
-
-}
-.info-div{
-  width: 27%;
-}
 
 .time{
   display: flex;
   justify-content: flex-end;
   padding-right: 10px;
-  height: 30px;
   font-weight: 900;
-
+  padding-bottom: 10px;
 }
 
 .copyright{

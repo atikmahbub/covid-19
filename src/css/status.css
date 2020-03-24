@@ -1,11 +1,80 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
 
+
+.status-page{
+    display: flex;
+    justify-content: space-between;;
+}
+
+@media only screen and (max-width: 600px) {
+    .status-page{
+        flex-direction: column;
+        margin-top: 8% !important;
+    }
+    .stat-div{
+        width: 98% !important;
+    }
+    .info-status{
+        width: 98% !important;
+        margin-top: 10px;
+    }
+    .bd-stat{
+        width: 85% !important;
+        padding: 9px !important;
+        word-spacing: 1px !important;
+    }
+}
 .status-main{
     display: flex;  
     justify-content: space-around;
     align-items: center;
+    
 }
+.info-status{
+    width: 29%;
+}
+
+.stat-div{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.bd-stat{
+    width: 90%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3% auto;
+    border-radius: 5px;
+    border-left: 5px solid #17a2b8;
+}
+.bd-text{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+.bd-stat-numbers{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    word-spacing: 2px;
+}
+.bd-stat-numbers div:nth-child(1){
+    color: #17a2b8
+}
+.bd-stat-numbers div:nth-child(2){
+    color: rgb(173, 75, 75)
+}
+.bd-stat-numbers div:nth-child(3){
+    color: #28a745
+}
+
+
+
 @media only screen and (max-width: 768px) {
     .status-main{
         flex-direction: column;
@@ -13,8 +82,11 @@
     }
     .paper-1 , .paper-2 , .paper-3 , .paper-4{
         width: 90% !important;
-        height: 50vh !important;
+        height: auto !important;
         margin: 10px;
+    }
+    .paper-number{
+        margin-top: 2px;
     }
 }
 
@@ -42,7 +114,7 @@
 }
 .paper-number{
     margin-top: 3%;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 600;
     font-family: 'Abril Fatface', cursive !important;
 }
@@ -52,7 +124,7 @@ body{
 }
 
 .paper-text1 , .paper-text2 , .paper-text3 ,.paper-text4{
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #fafafa;
     border-radius: 5px;
     padding: 5px;
@@ -71,11 +143,46 @@ body{
     background: #6c757d;
 }
 
-.stat-table{
-    display: flex;
-    justify-content: space-evenly;
-}
 .stat-table1{
-    width: 98%;
+    width: 100%;
     border-radius: 5px;
+}
+
+hr {
+    background-color: #fff;
+  }
+  
+hr.hr-1 {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+.info2{
+    height: 48% !important;
+    border-radius: 5px;
+    border-top: 5px solid #6c757d;
+    overflow: auto;
+}
+
+.info2 div{
+    padding: 10px 10px 0 10px;
+}
+
+.hotline-div{
+    display: flex;
+    padding: 10px 0 0 10px;
+}
+
+.title-info{
+    text-align: center;
+    font-weight: 900;
+}
+
+.info1{
+    height: 48%;
+    overflow: auto;
+    border-radius: 5px;
+    border-top: 5px solid #6c757d;
+    margin-top: 4%;
 }

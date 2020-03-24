@@ -103,7 +103,7 @@ function Chart() {
               <Line
                 data={caseData.dataLine}
                 options={{ responsive: true }}
-                height="225"
+                height="210"
 
               />
         </Paper>
@@ -117,7 +117,7 @@ function Chart() {
               <Line
                 data={deathData.dataLine}
                 options={{ responsive: true }}
-                height="225"
+                height="210"
 
               />
         </Paper>
@@ -130,7 +130,7 @@ function Chart() {
               <Pie
                 data={pieData}
                 options={{ responsive: true }}
-                height="210"
+                height="200"
               />
         </Paper>
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import Status from './Status'
-import Info from './Info'
 import './css/App.css'
 import Nav from './nav'
 import Chart from './Chart'
@@ -31,23 +30,22 @@ function App() {
   })
   
   return (
-    <>
-    <Nav/>
-   <div className="App-main">
-      <div className="time">  Update On : {date} </div>
-      <div className="App">
-        <div className="status-div"><Status/></div>
-        <div className="info-div"><Info/></div>
-      </div>
+    <div className="App-div">
       <div>
-        <Chart/>
+      <Nav/>
       </div>
+    
+    <div className="time">  Update On : {date} </div>
+
+    <div className="App">
+        <div><Status/></div>
+        <div ><Chart/></div>
     </div>
+
     <div className="copyright">
       <Copyright/>
+    </div> 
     </div>
-    
-    </>
   );
 }
 
