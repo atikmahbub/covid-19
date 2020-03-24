@@ -124,7 +124,7 @@ function Chart() {
 
         <Paper elevation={3} className="chart1" >
         <h5 className="chart-title">
-            <span>Total Recovered</span>
+            <span>Global Data</span>
               </h5>
               <hr className="hr-1"/>
               <Pie
