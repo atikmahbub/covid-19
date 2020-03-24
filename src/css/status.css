@@ -188,3 +188,8 @@ hr.hr-1 {
     border-top: 5px solid #6c757d;
     margin-top: 4%;
 }
+
+.live-tage{
+    display: block;
+    margin-left: 10px;
+}

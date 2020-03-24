@@ -1,5 +1,5 @@
 import React from 'react'
-import './css/Nav.css'
+import SkewLoader from "react-spinners/SkewLoader";
 
 
 const style = {
@@ -26,13 +26,23 @@ const style = {
     },
     text2 : {
         paddingRight : "10px"
+    },
+    loader :{
+        paddingLeft : "20px"
     }
+
 }
 
 function Nav() {
     return (
         <div  style={style.navbar}>
-            <div style={style.text}>Covid-19 <span className="live-tag"></span></div>
+            <div style={style.text}>Covid-19 <span className="live-tage">
+                <SkewLoader
+                size = {11}
+                color="red"
+                
+                />
+                </span></div>
             
             <div style={style.text2}>#staySafe</div>
         </div>
