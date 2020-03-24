@@ -144,8 +144,9 @@ body{
 }
 
 .stat-table1{
-    width: 100%;
+    width: 98%;
     border-radius: 5px;
+    margin-left: auto;
 }
 
 hr {
