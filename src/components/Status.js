@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import Paper from '@material-ui/core/Paper'
-import './css/status.css'
+import '../css/status.css'
 import MaterialTable from 'material-table';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight'
 import BounceLoader from "react-spinners/BounceLoader";

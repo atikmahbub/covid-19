@@ -1,8 +1,8 @@
 import React from 'react';
-import Status from './Status'
+import Status from './components/Status'
 import './css/App.css'
-import Nav from './nav'
-import Chart from './Chart'
+import Nav from './components/nav'
+import Chart from './components/Chart'
 
 function Copyright(){
   return(

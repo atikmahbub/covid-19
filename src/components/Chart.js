@@ -1,7 +1,7 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import { Line } from "react-chartjs-2";
-import './css/Chart.css'
+import '../css/Chart.css'
 import { Pie } from "react-chartjs-2";
 import axios from 'axios'
 import BounceLoader from "react-spinners/BounceLoader";
