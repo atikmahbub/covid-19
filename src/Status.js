@@ -198,7 +198,7 @@ function Status() {
         </Paper>
 
         <Paper elevation={3} className="info1">
-                <p className="title-info">IECDR Hotline(Bangladesh)</p>
+                <p className="title-info">IEDCR Hotline(Bangladesh)</p>
                 <hr className = "hr-1"/>
                 <div>
                     {
