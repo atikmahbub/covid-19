@@ -52,3 +52,11 @@ and (orientation : portrait) {
         height: 30vh;
     }
  }
+
+ .chart1 span{
+     background: #1D2939;
+     padding: 8px;
+     border-radius: 3px;
+     color: white;
+     font-weight: 600;
+ }

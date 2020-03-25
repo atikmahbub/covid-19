@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper'
 import './css/status.css'
 import MaterialTable from 'material-table';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight'
+import BounceLoader from "react-spinners/BounceLoader";
 
 
 const initialStatus = {
@@ -15,7 +16,7 @@ const initialStatus = {
     bdCases : 0,
     bdRecovered: 0,
     bdDeath: 0,
-    loading : false,
+    loading : true,
     error : null
 }
 
@@ -28,26 +29,29 @@ const statusReducer = (state , action) =>{
                 confirm_cases  :  action.payload.cases,
                 death : action.payload.deaths,
                 recover :  action.payload.recovered,
-                error: false
+                error: false,
+                loading : false
             }
         case "FETCH_DATA_ERROR":
             return{
                 ...state,
                 error : true,
-                loading : true,
             }
         case "COUNTRY_STAT_SUCCESS":
             return{
                 ...state,
                 tableData : action.payload,
-                totalCountry : action.length
+                totalCountry : action.length,
+                loading : false,
+
             }
         case "BD_FETCH_SUCCESS":
             return{
                 ...state,
                 bdCases : action.payload.cases,
                 bdDeath : action.payload.deaths,
-                bdRecovered : action.payload.recovered
+                bdRecovered : action.payload.recovered,
+                loading : false
             }
         default:
             return state
@@ -89,6 +93,7 @@ function Status() {
 
     React.useEffect(() =>{
     
+
     getStatusData()
     getCountryData()
     getBdData()
@@ -129,7 +134,11 @@ function Status() {
     
     return (
         <div className="status-page">
+           
         <div className="stat-div">
+
+        { ! state.loading ? 
+        <span>
         <div className = "status-main">
             <Paper elevation={3} className="paper-1">
                  <div className="paper-text1">Confirmed</div>
@@ -148,8 +157,12 @@ function Status() {
                 <div className="paper-number">{state.totalCountry}</div>
             </Paper>
         </div>
+
+
+
+
         <Paper className="bd-stat" elevation={3}>
-            <div className="bd-text">Bangladesh <hr className = "hr-1"/> </div>
+            <div className="bd-text"><span>Bangladesh</span> <hr className = "hr-1"/> </div>
             
             <div className = "bd-stat-numbers">
                 <div>Confirmed : {state.bdCases}</div>
@@ -157,6 +170,18 @@ function Status() {
                 <div>Recovered : {state.bdRecovered}</div>
             </div>
         </Paper>
+        </span>
+        : (
+        <div className="worldLoader">
+            <BounceLoader
+                size={50}
+                color="teal"
+                className="loader"
+            />
+            Loading Data, Please wait...
+        </div>
+        
+        ) }
         <Paper elevation={3} className="stat-table1">
                 <MaterialTable
                     title="COVID-19"

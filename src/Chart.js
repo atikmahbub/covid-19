@@ -4,11 +4,13 @@ import { Line } from "react-chartjs-2";
 import './css/Chart.css'
 import { Pie } from "react-chartjs-2";
 import axios from 'axios'
+import BounceLoader from "react-spinners/BounceLoader";
 
 const initialState = {
   Active:"",
   Death : "",
-  Recovered : ""
+  Recovered : "",
+  graphLoader : true,
 }
 
 function Chart() {
@@ -23,13 +25,13 @@ function Chart() {
     },[])
 
   const getStatusData = () =>{
-    console.log("Refreshing...")
     axios.get('https://corona.lmao.ninja/all')
     .then(response =>{
         setState({ ...state,
           Active : response.data.cases ,
           Death : response.data.deaths,
-          Recovered : response.data.recovered
+          Recovered : response.data.recovered,
+          graphLoader : false,
           })
     })
     .catch(err =>{
@@ -98,7 +100,7 @@ function Chart() {
         <Paper elevation={3} className="chart1">
         <h5 className="chart-title">
                 <span>Total Cases</span>
-              </h5>
+        </h5>
               <hr className="hr-1"/>
               <Line
                 data={caseData.dataLine}
@@ -127,13 +129,24 @@ function Chart() {
             <span>Global Data</span>
               </h5>
               <hr className="hr-1"/>
+              { !state.graphLoader ? 
               <Pie
                 data={pieData}
                 options={{ responsive: true }}
                 height="180"
               />
+              :(
+              <div className="worldLoader">
+                <BounceLoader
+                    size={50}
+                    color="teal"
+                    className="loader"
+                />
+                Loading Data, Please wait...
+            </div>
+              )
+          }     
         </Paper>
-
         </div>
     )
 }
