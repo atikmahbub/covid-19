@@ -169,13 +169,13 @@ function Status() {
             <div className="bd-text"><span>Bangladesh</span> <hr className = "hr-1"/> </div>
             
             <div className = "bd-stat-numbers">
-                <div>Confirmed : 
+                <div>Confirmed : {""}
                     <NumberFormat value={state.bdCases} displayType={'text'} thousandSeparator={true} />
                 </div>
-                <div>Death : 
+                <div>Death : {""}
                     <NumberFormat value={state.bdDeath} displayType={'text'} thousandSeparator={true} />
                 </div>
-                <div>Recovered :
+                <div>Recovered : {""}
                     <NumberFormat value={state.bdRecovered} displayType={'text'} thousandSeparator={true} />
                 </div>
             </div>
