@@ -5,6 +5,8 @@ import '../css/status.css'
 import MaterialTable from 'material-table';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight'
 import BounceLoader from "react-spinners/BounceLoader";
+import NumberFormat from 'react-number-format';
+
 
 
 const initialStatus = {
@@ -142,32 +144,40 @@ function Status() {
         <div className = "status-main">
             <Paper elevation={3} className="paper-1">
                  <div className="paper-text1">Confirmed</div>
-                <div className="paper-number">{state.confirm_cases}</div>
+                <div className="paper-number">
+                <NumberFormat value={state.confirm_cases} displayType={'text'} thousandSeparator={true} />
+                </div>
             </Paper>
             <Paper elevation={3} className="paper-2">
                 <div className="paper-text2">Death</div>
-                <div className="paper-number">{state.death}</div>
+                <div className="paper-number">
+                    <NumberFormat value={state.death} displayType={'text'} thousandSeparator={true} />
+                </div>
             </Paper>
             <Paper elevation={3} className="paper-3">
                 <div className="paper-text3">Recovered</div>
-                <div className="paper-number">{state.recover}</div>
+                <div className="paper-number">
+                    <NumberFormat value={state.recover} displayType={'text'} thousandSeparator={true} />
+                </div>
             </Paper>
             <Paper elevation={3} className="paper-4">
                 <div className="paper-text4">Total Country</div>
                 <div className="paper-number">{state.totalCountry}</div>
             </Paper>
         </div>
-
-
-
-
         <Paper className="bd-stat" elevation={3}>
             <div className="bd-text"><span>Bangladesh</span> <hr className = "hr-1"/> </div>
             
             <div className = "bd-stat-numbers">
-                <div>Confirmed : {state.bdCases}</div>
-                <div>Death : {state.bdDeath} </div>
-                <div>Recovered : {state.bdRecovered}</div>
+                <div>Confirmed : 
+                    <NumberFormat value={state.bdCases} displayType={'text'} thousandSeparator={true} />
+                </div>
+                <div>Death : 
+                    <NumberFormat value={state.bdDeath} displayType={'text'} thousandSeparator={true} />
+                </div>
+                <div>Recovered :
+                    <NumberFormat value={state.bdRecovered} displayType={'text'} thousandSeparator={true} />
+                </div>
             </div>
         </Paper>
         </span>

@@ -6,6 +6,7 @@ import { Pie } from "react-chartjs-2";
 import axios from 'axios'
 import BounceLoader from "react-spinners/BounceLoader";
 
+
 const initialState = {
   Active:"",
   Death : "",
@@ -132,7 +133,11 @@ function Chart() {
               { !state.graphLoader ? 
               <Pie
                 data={pieData}
-                options={{ responsive: true }}
+                options={
+                  { 
+                    responsive: true,
+                  }
+                }
                 height="180"
               />
               :(
