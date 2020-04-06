@@ -15,6 +15,7 @@
 }
 .section-1-right{
     width: 25%;
+
 }
 
 .status-main{
@@ -106,14 +107,16 @@ hr.hr-1 {
 .bd-text span{
     background: #1D2939;
     color: white;
-    padding: 10px;
-    border-radius: 3px;
+    padding: 10px 60px 10px 60px;
+    border-radius: 1px;
+    letter-spacing: 2px;
 }
 .title-info span{
     background: #1D2939;
     color: white;
     padding: 10px;
     border-radius: 3px;
+    
 }
 
 .bd-stat{
@@ -366,3 +369,21 @@ hr.hr-1 {
         height: 4vh !important;
     }
   }
+
+
+
+  @media only screen and (min-width : 321px) and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 2) {
+            .section-1-right{
+                height: 50vh !important;
+                overflow: scroll !important
+            }
+            .chart-global{
+                height: 70vh !important;
+            }
+            .bd-confirm div:nth-child(2) , .bd-death div:nth-child(2) , .bd-recovered div:nth-child(2),.bd-todayCases div:nth-child(2),.bd-todayDeath div:nth-child(2),.bd-active div:nth-child(2){
+                font-size: 0.9rem;
+            }
+            .bd-text , .bd-stat{
+                margin-top: 4%;
+            }
+        }
