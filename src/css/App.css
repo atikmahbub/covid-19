@@ -1,7 +1,7 @@
 .App-div{
   display: flex;
   flex-direction: column;
-  margin-top: 8%;
+  margin-top: 7%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -12,10 +12,8 @@
   .staus-app{
     height: 100% !important;
   }
-  .copyright{
-    position: relative;
-    top: 390px;
-
+  .App-div{
+    margin-top: 10%;
   }
 }
 
@@ -34,9 +32,13 @@
   text-align: center;
   margin-top: 20px;
   color: gray;
+  margin-bottom: 10px;
+  
 }
 
 .copy-div a{
   color: rgb(112, 137, 190);
+  text-decoration: none !important;
+
 }
 

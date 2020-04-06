@@ -1,5 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Lato&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap'); */
+
 
 
 .status-page{
@@ -45,17 +44,19 @@
     width: 70%;
 }
 .bd-stat{
-    width: 90%;
-    padding: 15px;
+    width: 95%;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 3% auto;
+    margin: 2% auto;
     border-radius: 5px;
     border-left: 5px solid #176f7c;
 }
 .bd-text{
     text-align: center;
+    margin-top: 2%;
+    display: block;
     font-size: 1.2rem;
     font-weight: 600 !important;
     letter-spacing: 1px;
@@ -131,7 +132,7 @@
 
 
 .paper-1 , .paper-2 , .paper-3 , .paper-4{
-    height: 20vh;
+    height: 15vh;
     flex-basis: 23%;
     display: flex;
     justify-content: center;

@@ -1,10 +1,10 @@
 import React from 'react';
-import Status from './components/Status'
+import DataStatus from './components/DataStatus'
 import './css/App.css'
 import Nav from './components/nav'
-import Chart from './components/Chart'
 
 function Copyright(){
+
   return(
     <div className="copy-div">
       {"Copyright © "}
@@ -15,35 +15,29 @@ function Copyright(){
   )
 }
 
-function App() {
-
-  const [date, setDate] = React.useState(new Date().toLocaleString())
-  React.useEffect(() => {
-    let interval = setInterval(() =>{
-      const date = new Date().toLocaleString()
-      setDate(date.toLocaleString())
-    } , 10*1000)
-    return () =>{
-      clearInterval(interval)
-    }
-
-  })
+function App() {  
+  const [loader , setLoader] = React.useState(true)
   
+  const handleLoading = (value) =>{
+      setLoader(value)
+  }
   return (
     <div className="App-div">
       <div>
       <Nav/>
       </div>
-    
-    <div className="time">Last Updated on : {date} </div>
 
     <div className="App">
-        <div className="staus-app"><Status/></div>
-        <div><Chart/></div>
+        <div className="staus-app">
+          <DataStatus handleLoading={handleLoading}/>
+        </div>
     </div>
 
     <div className="copyright">
+
+      { !loader ?
       <Copyright/>
+      : ""}
     </div> 
     </div>
   );

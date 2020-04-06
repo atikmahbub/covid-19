@@ -35,7 +35,7 @@ const style = {
 
 function Nav() {
     return (
-        <div  style={style.navbar}>
+        <div  style={style.navbar} className="nav">
             <div style={style.text}>Covid-19 <span className="live-tage">
                 <SkewLoader
                 size = {11}
