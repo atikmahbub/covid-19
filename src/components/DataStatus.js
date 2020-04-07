@@ -146,7 +146,7 @@ function DataStatus({handleLoading}) {
           {
             data: [state.confirm_cases - (state.death + state.recover), state.death , state.recover],
             backgroundColor: ["#78a7de", "#e38181" ,"#baedb4"],
-            hoverBackgroundColor: ["blue", "red","green"]
+            hoverBackgroundColor: ["#17a2b8", "#ad4b4b","#28a745"]
           }
         ]
       };
