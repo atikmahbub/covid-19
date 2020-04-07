@@ -199,6 +199,11 @@ function DataStatus({handleLoading}) {
                             <div>Recovered</div> 
                         </Paper>
 
+                        <Paper elevation={2} className="bd-active">
+                            <div className="bd-number"><NumberFormat value={state.bdActive} displayType={'text'} thousandSeparator={true} /></div>
+                            <div>Active</div> 
+                        </Paper>
+
                         <Paper elevation={2} className="bd-todayCases">
                             <div className="bd-number"><NumberFormat value={state.bdTodayCases} displayType={'text'} thousandSeparator={true} /></div>
                             <div>Case's Today</div> 
@@ -209,10 +214,7 @@ function DataStatus({handleLoading}) {
                             <div>Death's Today</div> 
                         </Paper>
 
-                        <Paper elevation={2} className="bd-active">
-                            <div className="bd-number"><NumberFormat value={state.bdActive} displayType={'text'} thousandSeparator={true} /></div>
-                            <div>Active</div> 
-                        </Paper>
+
                     </div>
                 </div>
 
