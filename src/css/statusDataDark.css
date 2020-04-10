@@ -19,33 +19,38 @@
 .bd-stat-dark > .bd-confirm{
     background-color: #333;
     color:rgb(247, 240, 240);
+    border: none;
 
 }
 
 .bd-stat-dark > .bd-death{
     background-color: #333;
     color:rgb(247, 240, 240);
+    border: none;
 
 }
 .bd-stat-dark > .bd-recovered{
     background-color: #333;
     color:rgb(247, 240, 240);
+    border: none;
 
 }
 .bd-stat-dark > .bd-todayCases{
     background-color: #333;
     color:rgb(247, 240, 240);
+    border: none;
 
 }
 .bd-stat-dark > .bd-todayDeath{
     background-color: #333;
     color:rgb(247, 240, 240);
+    border: none;
 
 }
 .bd-stat-dark > .bd-active{
     background-color: #333;
     color:rgb(247, 240, 240);
-
+    border: none;
 }
 
 .info2-dark{
@@ -100,9 +105,9 @@ hr.hr-1-dark {
     background: rgb(105, 104, 104);
 }
 .title-info-dark span{
-    background: rgb(105, 104, 104);
+    background: none;
 }
 
 .chart-title-dark span{
-    background: rgb(105, 104, 104);
+    background: none;
 }
