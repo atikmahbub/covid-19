@@ -341,13 +341,14 @@ hr.hr-1 {
         height: 40vh !important;
     }
     .chart-global{
-        height: 40vh;
+        height: 40vh !important;
     }
     .copyright{
         position:  relative !important;
         top: 10px;
         margin-bottom: 0px;
     }
+    
   }
 
   @media only screen 
@@ -382,7 +383,7 @@ hr.hr-1 {
                 overflow: scroll !important
             }
             .chart-global{
-                height: 70vh !important;
+                height: auto !important;
             }
             .bd-confirm div:nth-child(2) , .bd-death div:nth-child(2) , .bd-recovered div:nth-child(2),.bd-todayCases div:nth-child(2),.bd-todayDeath div:nth-child(2),.bd-active div:nth-child(2){
                 font-size: 0.9rem;

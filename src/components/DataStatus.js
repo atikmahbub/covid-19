@@ -19,6 +19,9 @@ const initialStatus = {
     bdCases : 0,
     bdRecovered: 0,
     bdDeath: 0,
+    bdTodayCases : 0,
+    bdTodayDeaths : 0,
+    bdActive : 0,
     loading : true,
     error : null
 }
@@ -260,6 +263,7 @@ function DataStatus({handleLoading , theme}) {
                             fontWeight : "600",
                             lineHeight : "1.2",
                             },
+                            
                         }
                     }
                     />

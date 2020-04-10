@@ -74,15 +74,19 @@ hr.hr-1-dark {
 }
 
 
-.status-table-dark > .MuiInputBase-input {
+.status-table-dark > .MuiSelect-selectMenu{
+    color:rgb(247, 240, 240) !important;
+}
+
+.status-table-dark input[type="text"]{
     background-color: #333 !important;
     color:rgb(247, 240, 240) !important;
 }
 
-.status-table-dark > .MuiTablePagination-toolbar {
-    background-color: #333 !important;
-    color:rgb(247, 240, 240) !important;
+.status-table-dark span{
+    color:white !important;
 }
+
 
 .time-dark{
     color:rgb(247, 240, 240) !important;
