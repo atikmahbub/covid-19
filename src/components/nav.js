@@ -1,11 +1,14 @@
 import React from 'react'
 import SkewLoader from "react-spinners/SkewLoader";
+import Brightness4Icon from '@material-ui/icons/Brightness4';
+import Brightness7Icon from '@material-ui/icons/Brightness7';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const style = {
 
     navbar : {
-    background : "#1D2939",
+    background : "#333",
     height : "8vh",
     position : "fixed",
     top : "0",
@@ -25,15 +28,28 @@ const style = {
         
     },
     text2 : {
-        paddingRight : "10px"
+        paddingRight : "10px",
+        display : "flex",
     },
     loader :{
         paddingLeft : "20px"
+    },
+    toggle :{
+        marginRight : "20px",
+        cursor : "pointer"
     }
 
 }
 
-function Nav() {
+function Nav({themeColorCallback}) {
+    const [theme , setTheme] = React.useState(localStorage.getItem('theme-color') || 'light')
+
+    const handleTheme = (value) =>{
+        setTheme(value)
+    }
+    localStorage.setItem('theme-color' , theme)
+    themeColorCallback(theme)
+
     return (
         <div  style={style.navbar} className="nav">
             <div style={style.text}>Covid-19 <span className="live-tage">
@@ -44,7 +60,14 @@ function Nav() {
                 />
                 </span></div>
             
-            <div style={style.text2}>#staySafe</div>
+            <div style={style.text2} data-toggle="tooltip" data-placement="top" title="toogle light/dark theme">
+                <div style={style.toggle}>
+                    {
+                        theme === 'light' ? <Brightness4Icon onClick={() => handleTheme('dark')}/> : <Brightness7Icon onClick={() => handleTheme('light')}/>
+                    }
+                </div>
+                <div>#staySafe</div>
+            </div>
         </div>
     )
 }

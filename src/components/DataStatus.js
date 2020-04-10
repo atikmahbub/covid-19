@@ -7,6 +7,7 @@ import BounceLoader from "react-spinners/BounceLoader";
 import NumberFormat from 'react-number-format';
 import { Pie } from "react-chartjs-2";
 import Loader from 'react-spinners/BounceLoader';
+import '../css/statusDataDark.css'
 
 
 const initialStatus = {
@@ -64,7 +65,7 @@ const statusReducer = (state , action) =>{
     
 }
 
-function DataStatus({handleLoading}) {
+function DataStatus({handleLoading , theme}) {
     const [state, dispatch] = React.useReducer(statusReducer, initialStatus)
     const [date, setDate] = React.useState(new Date().toLocaleString())
 
@@ -75,8 +76,9 @@ function DataStatus({handleLoading}) {
           { title: 'Deaths', field: 'death' },
           { title: 'Critical', field: 'critical' },
           { title: 'Today Deaths', field: 'todayDeaths',cellStyle: {
-            color : "red",
+            color : theme === "dark" ? "#db8888" : "red",
             fontWeight : "900",
+            
 
           }, },
           { title: 'Recovered', field: 'recovered', cellStyle :{
@@ -155,10 +157,10 @@ function DataStatus({handleLoading}) {
         <>
         {!state.loading ? 
         <div className="data-status">
-            <div className="time">Last Updated on : {date} </div> 
+            <div className={theme === "dark" ? "time time-dark" : "time"}>Last Updated on : {date} </div> 
             <div className="section-1">
                 <div className="section-1-left">
-                    <div className = "status-main">
+                    <div className = {theme === "dark" ? "status-main status-main-dark" : "status-main"}>
                     <Paper elevation={3} className="paper-1">
                         <div className="paper-text1">Confirmed</div>
                         <div className="paper-number">
@@ -182,8 +184,8 @@ function DataStatus({handleLoading}) {
                         <div className="paper-number">{state.totalCountry}</div>
                     </Paper>
                     </div>
-                    <div className="bd-text"><span>Bangladesh</span></div>
-                    <div className="bd-stat" elevation={3}>
+                    <div className= {theme === "dark" ? "bd-text bd-text-dark" : "bd-text"}><span>Bangladesh</span></div>
+                    <div className= {theme === "dark" ? "bd-stat bd-stat-dark" : "bd-stat"} elevation={3}>
                         <Paper elevation={2} className="bd-confirm">
                             <div className="bd-number"><NumberFormat value={state.bdCases} displayType={'text'} thousandSeparator={true} /></div>
                             <div>Confirmed</div>
@@ -220,9 +222,9 @@ function DataStatus({handleLoading}) {
 
 
                 <div className="section-1-right">
-                <Paper elevation={3} className="info2">
-                    <p className="title-info"><span>Symptoms</span></p>
-                    <hr className = "hr-1"/>
+                <Paper elevation={3} className={theme === "dark" ? "info2 info2-dark" : "info2"}>
+                    <p className={theme=== "dark" ? "title-info title-info-dark" : "title-info"}><span>Symptoms</span></p>
+                    <hr className = {theme === "dark" ? "hr-1-dark" : "hr-1"}/>
                     <div>Common Symptomps are:
                         <ul>
                             <li>fever</li>
@@ -244,7 +246,7 @@ function DataStatus({handleLoading}) {
             </div>
 
             <div className="section-2">
-                <Paper elevation={3} className="status-table">
+                <Paper elevation={3} className= {theme === "dark" ? "status-table status-table-dark" : "status-table"}>
                     <MaterialTable
                         title="COVID-19"
                         columns={columns}
@@ -256,13 +258,14 @@ function DataStatus({handleLoading}) {
                             color: "#FFF",
                             fontSize: ".75rem",
                             fontWeight : "600",
-                            lineHeight : "1.2"
+                            lineHeight : "1.2",
                             },
-                        }}
+                        }
+                    }
                     />
                 </Paper>
-                <Paper elevation={3} className="chart-global" >
-                    <h5 className="chart-title">
+                <Paper elevation={3} className= {theme === "dark" ? "chart-global chart-global-dark" : "chart-global"} >
+                    <h5 className={theme === "dark" ? "chart-title chart-title-dark" : "chart-title"}>
                     <span>Global Data</span>
                     </h5>
                     <hr className="hr-1"/>
@@ -273,6 +276,11 @@ function DataStatus({handleLoading}) {
                         { 
                             responsive: true,
                             maintainAspectRatio : true,
+                            legend: {
+                                labels: {
+                                    fontColor: theme === "dark" ? "white" : "black"
+                                }
+                            },
                         }
                         }
                         width="170"
@@ -281,7 +289,7 @@ function DataStatus({handleLoading}) {
             </div>
         </div>
         :(
-            <div className="worldLoader">
+            <div className={theme === "dark" ? "worldLoader worldLoader-dark" : "worldLoader"}>
             <BounceLoader
                 size={50}
                 color="teal"

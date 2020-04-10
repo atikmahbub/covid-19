@@ -80,7 +80,6 @@ hr.hr-1 {
   }
 
 .info2{
-
     border-radius: 5px;
     border-top: 5px solid #6c757d;
     overflow: auto;
@@ -93,6 +92,7 @@ hr.hr-1 {
 .title-info{
     text-align: center;
     font-weight: 700;
+    padding-top: 12px;
 }
 
 .bd-text{
@@ -103,17 +103,18 @@ hr.hr-1 {
     font-weight: 500 !important;
     letter-spacing: 1px;
     
+    
 }
 .bd-text span{
     background: #1D2939;
-    color: white;
+    color: #fafafa;
     padding: 10px 60px 10px 60px;
     border-radius: 1px;
     letter-spacing: 2px;
 }
 .title-info span{
     background: #1D2939;
-    color: white;
+    color: #fafafa;
     padding: 10px;
     border-radius: 3px;
     
@@ -211,6 +212,9 @@ hr.hr-1 {
 
 .chart-title{
     text-align: center;
+    padding-top: 12px;
+    font-family: "Fira Sans", "Lato", Arial, sans-serif;
+    font-size: 1rem;
 }
 
 

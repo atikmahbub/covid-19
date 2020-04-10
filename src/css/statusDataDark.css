@@ -1,0 +1,104 @@
+.status-main-dark > .paper-1  {
+    background-color: #333;
+    color:rgb(247, 240, 240);
+}
+
+.status-main-dark > .paper-2{
+    background-color: #333;
+    color:rgb(247, 240, 240);
+}
+.status-main-dark > .paper-3{
+    background-color: #333;
+    color:rgb(247, 240, 240);
+}
+.status-main-dark > .paper-4{
+    background-color: #333;
+    color:rgb(247, 240, 240);
+}
+
+.bd-stat-dark > .bd-confirm{
+    background-color: #333;
+    color:rgb(247, 240, 240);
+
+}
+
+.bd-stat-dark > .bd-death{
+    background-color: #333;
+    color:rgb(247, 240, 240);
+
+}
+.bd-stat-dark > .bd-recovered{
+    background-color: #333;
+    color:rgb(247, 240, 240);
+
+}
+.bd-stat-dark > .bd-todayCases{
+    background-color: #333;
+    color:rgb(247, 240, 240);
+
+}
+.bd-stat-dark > .bd-todayDeath{
+    background-color: #333;
+    color:rgb(247, 240, 240);
+
+}
+.bd-stat-dark > .bd-active{
+    background-color: #333;
+    color:rgb(247, 240, 240);
+
+}
+
+.info2-dark{
+    background-color: #333 !important;
+    color:rgb(247, 240, 240) !important;
+    border-top: 5px solid rgb(231, 220, 220) !important;
+}
+
+
+hr.hr-1-dark {
+    border: 0;
+    height: 2px;
+    
+    background-image: linear-gradient(to right, rgba(253, 253, 253, 0), rgba(243, 236, 236, 0.75), rgba(255, 255, 255, 0));
+  }
+
+.chart-global-dark{
+    background-color: #333 !important;
+    color:rgb(247, 240, 240) !important;
+    border-top: 5px solid rgb(231, 220, 220) !important;
+}
+
+.status-table-dark > .MuiPaper-elevation2{
+    background-color: #333 !important;
+    color:rgb(247, 240, 240) !important;
+}
+
+
+.status-table-dark > .MuiInputBase-input {
+    background-color: #333 !important;
+    color:rgb(247, 240, 240) !important;
+}
+
+.status-table-dark > .MuiTablePagination-toolbar {
+    background-color: #333 !important;
+    color:rgb(247, 240, 240) !important;
+}
+
+.time-dark{
+    color:rgb(247, 240, 240) !important;
+}
+
+.worldLoader-dark{
+    color:rgb(247, 240, 240) !important;
+}
+
+.bd-text-dark span{
+    background: rgb(105, 104, 104);
+}
+.title-info-dark span{
+    background: rgb(105, 104, 104);
+}
+
+.chart-title-dark span{
+    background: rgb(105, 104, 104);
+}

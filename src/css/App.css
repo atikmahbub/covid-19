@@ -4,6 +4,17 @@
   margin-top: 7%;
 }
 
+body{
+  font-family: "Fira Sans", "Lato", Arial, sans-serif !important;
+  
+}
+/* .App-div-dark{
+  display: flex;
+  flex-direction: column;
+  margin-top: 7%;
+  background: #121212;
+} */
+
 @media only screen and (max-width: 600px) {
   .time{
       position: relative;
