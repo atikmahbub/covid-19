@@ -118,7 +118,7 @@ function DataStatus({handleLoading , theme}) {
     },[])
 
     const getBdData =() =>{
-        axios.get('https://corona.lmao.ninja/countries/Bangladesh')
+        axios.get('https://corona.lmao.ninja/v2/countries/Bangladesh')
         .then(response =>{
             handleLoading(false)
             dispatch({type : "BD_FETCH_SUCCESS" , payload : response.data})
@@ -129,7 +129,7 @@ function DataStatus({handleLoading , theme}) {
     }
 
     const getStatusData = () =>{
-        axios.get('https://corona.lmao.ninja/all')
+        axios.get('https://corona.lmao.ninja/v2/all')
         .then(response =>{
             dispatch({type : "FETCH_DATA_SUCCESS" ,  payload : response.data})
         })
@@ -139,7 +139,7 @@ function DataStatus({handleLoading , theme}) {
     }
 
     const getCountryData = () =>{
-        axios.get('https://corona.lmao.ninja/countries')
+        axios.get('https://corona.lmao.ninja/v2/countries')
         .then(res=>{
             dispatch({type : "COUNTRY_STAT_SUCCESS" , payload :  res.data , length : res.data.length})
         })
