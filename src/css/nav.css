@@ -1,0 +1,41 @@
+.navbar{
+    background : #1D2939;
+    height : 8vh;
+    position : fixed;
+    top : 0;
+    color : white;
+    width : 100%;
+    display : flex; 
+    justify-content : space-between;
+    align-items : center;
+    z-index:1000;
+}
+
+.nav-text{
+    font-size : 1.2rem;
+    font-weight : 900;
+    text-transform : uppercase;
+    display: flex  
+}
+
+.nav-text2{
+    padding-left : 10px;
+    display : flex
+}
+
+.nav-loader{
+    padding-left : 20px
+}
+
+.nav-toggle{
+    margin-right : 20px;
+    cursor : pointer
+}
+
+.corona-image{
+    padding: 3px 2px 3px 0;
+  }
+
+.navbar-dark{
+    background: #333;
+}
